@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Solutions - ICT Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">TechPro Solutions</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to TechPro Solutions</h1>
+                <p>Your trusted partner for ICT services and digital transformation</p>
+                <button class="cta-btn" onclick="scrollToContact()">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications tailored to your business needs. Responsive design for all devices.</p>
+                    <div class="price">₱15,000 - ₱50,000</div>
+                    <button class="quote-btn" onclick="generateQuote('Web Development', 'Web Development service')">Request Quote</button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>IT Security & Support</h3>
+                    <p>Network security, data protection, and 24/7 technical support to keep your systems running smoothly.</p>
+                    <div class="price">₱8,000 - ₱25,000/month</div>
+                    <button class="quote-btn" onclick="generateQuote('IT Security & Support', 'IT Security & Support service')">Request Quote</button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Cloud infrastructure setup, migration, and management. Scalable solutions for growing businesses.</p>
+                    <div class="price">₱12,000 - ₱40,000/month</div>
+                    <button class="quote-btn" onclick="generateQuote('Cloud Solutions', 'Cloud Solutions service')">Request Quote</button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android platforms.</p>
+                    <div class="price">₱20,000 - ₱80,000</div>
+                    <button class="quote-btn" onclick="generateQuote('Mobile App Development', 'Mobile App Development service')">Request Quote</button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Data Analytics</h3>
+                    <p>Business intelligence and data-driven insights to improve your decision-making process.</p>
+                    <div class="price">₱10,000 - ₱35,000/project</div>
+                    <button class="quote-btn" onclick="generateQuote('Data Analytics', 'Data Analytics service')">Request Quote</button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>IT Training & Consulting</h3>
+                    <p>Professional training programs and strategic IT consulting for your organization.</p>
+                    <div class="price">₱5,000 - ₱15,000/session</div>
+                    <button class="quote-btn" onclick="generateQuote('IT Training & Consulting', 'IT Training & Consulting service')">Request Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Select a Service --</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="IT Security & Support">IT Security & Support</option>
+                            <option value="Cloud Solutions">Cloud Solutions</option>
+                            <option value="Mobile App Development">Mobile App Development</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="IT Training & Consulting">IT Training & Consulting</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Email:</strong> info@techprosolutions.com</p>
+                    <p><strong>Phone:</strong> +63 (2) 1234-5678</p>
+                    <p><strong>Address:</strong> Manila, Philippines</p>
+                    <p><strong>Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+                    
+                    <h3 style="margin-top: 30px;">Why Choose Us?</h3>
+                    <ul class="features-list">
+                        <li>✓ 10+ years of industry experience</li>
+                        <li>✓ Expert certified team</li>
+                        <li>✓ 24/7 customer support</li>
+                        <li>✓ Affordable pricing</li>
+                        <li>✓ Proven track record</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Modal -->
+        <div id="quoteModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeQuoteModal()">&times;</span>
+                <h3>Request Quote</h3>
+                <div id="quoteDetails"></div>
+                <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+                    <div class="form-group">
+                        <label for="quoteName">Your Name</label>
+                        <input type="text" id="quoteName" name="quoteName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quoteEmail">Your Email</label>
+                        <input type="email" id="quoteEmail" name="quoteEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quoteNotes">Additional Notes</label>
+                        <textarea id="quoteNotes" name="quoteNotes" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Request Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TechPro Solutions. All rights reserved.</p>
+            <p>Providing quality ICT services across the Philippines</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
